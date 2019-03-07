@@ -29,8 +29,8 @@ throttle.max_uploads.set = 8
 
 # Global upload and download rate in KiB. "0" for unlimited.
 #
-#throttle.global_down.max_rate.set_kb = 0
-#throttle.global_up.max_rate.set_kb = 0
+throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 0
 
 # Default directory to save the downloaded torrents.
 directory.default.set = /downloads
@@ -63,7 +63,7 @@ schedule2 = watch_directory,5,5,load_start=/downloads/.rtorrent/watch/*.torrent
 network.port_range.set = 49161-49161
 
 # Start opening ports at a random position within the port range.
-network.port_random.set = yes
+network.port_random.set = no
 
 # Check hash for finished torrents. Might be usefull until the bug is
 # fixed that causes lack of diskspace not to be properly reported.
@@ -92,7 +92,7 @@ trackers.use_udp.set = yes
 # "auto" (start and stop DHT as needed), or "on" (start DHT immediately).
 # The default is "off". For DHT to work, a session directory must be defined.
 # 
-dht.mode.set = auto
+dht.mode.set = off
 
 # UDP port to use for DHT. 
 # 
